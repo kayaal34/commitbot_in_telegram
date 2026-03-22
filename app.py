@@ -4,8 +4,8 @@ import requests
 
 app = Flask(__name__)
 
-TOKEN = os.getenv("8713558550:AAHj7OLCm6U_CGDH2hw1fVqWvKE_4p9pB88")
-CHAT_ID = os.getenv("5245230833")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 @app.route('/webhook', methods=['POST'])
 def github_webhook():
