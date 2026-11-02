@@ -5,6 +5,7 @@ Bu proje, belirlenen GitHub depolarında (repository) gerçekleşen her **commit
 ## ✨ Özellikler
 * **Anlık Bildirim:** GitHub Webhook'ları sayesinde saniyeler içinde bildirim gönderir.
 * **Çoklu Proje Desteği:** Tek bir bot üzerinden sınırsız sayıda depoyu takip edebilir.
+* **İmza Doğrulama:** `GITHUB_WEBHOOK_SECRET` tanımlıysa imzası tutmayan istekler 401 ile reddedilir.
 * **Güvenli Yapı:** API Token ve Chat ID gibi hassas bilgiler `Environment Variables` (Ortam Değişkenleri) üzerinden yönetilir.
 * **Detaylı Mesaj İçeriği:** Bildirim; repo adı, commit mesajı, push yapan kullanıcı ve commit detayına giden doğrudan bağlantıyı içerir.
 
@@ -25,3 +26,4 @@ Bu proje, belirlenen GitHub depolarında (repository) gerçekleşen her **commit
    ```env
    TELEGRAM_TOKEN=your_bot_token
    TELEGRAM_CHAT_ID=your_chat_id
+   GITHUB_WEBHOOK_SECRET=webhook_secret # GitHub webhook ayarındaki Secret, isteğe bağlı
